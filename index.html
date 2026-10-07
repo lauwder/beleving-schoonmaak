@@ -40,7 +40,7 @@
 .install .acts{display:flex;gap:8px;align-items:center}
 .install kbd{font:inherit;border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:var(--ink)}
 
-.themebox{display:flex;justify-content:flex-end;margin:0 0 6px}
+.themebox{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:18px;color:var(--muted);font-size:.9rem}
 .themebox .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
 .themebox .seg button{background:none;border:0;color:var(--muted);padding:8px 14px;min-height:40px;font:inherit;font-size:.9rem;cursor:pointer}
 .themebox .seg button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink)}
@@ -206,13 +206,6 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:18px;display
 <body>
 <div class="wrap">
   <header class="top">
-  <div class="themebox" role="group" aria-label="Weergave">
-    <div class="seg">
-      <button type="button" data-theme-choice="auto" aria-pressed="true">Automatisch</button>
-      <button type="button" data-theme-choice="light" aria-pressed="false">Licht</button>
-      <button type="button" data-theme-choice="dark" aria-pressed="false">Donker</button>
-    </div>
-  </div>
     <h1>Beleving Schoonmaak</h1>
     <p>Zeven vragen over de samenwerking met het schoonmaakteam. Kies bij elke vraag blij of niet blij en zie hoe je community manager reageert.</p>
   </header>
@@ -378,6 +371,14 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:18px;display
     <div class="acts">
       <button type="button" class="btn small" id="installBtn" hidden>Installeer als app</button>
       <button type="button" class="linkbtn" id="installDismiss">Verberg</button>
+    </div>
+  </div>
+  <div class="themebox" role="group" aria-label="Weergave">
+    <span>Weergave</span>
+    <div class="seg">
+      <button type="button" data-theme-choice="auto" aria-pressed="true">Automatisch</button>
+      <button type="button" data-theme-choice="light" aria-pressed="false">Licht</button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false">Donker</button>
     </div>
   </div>
 
